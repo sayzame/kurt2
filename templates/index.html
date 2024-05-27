@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чат с Куртом</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-gray-900 text-white font-mono">
+  <div class="container mx-auto px-4 py-8 h-screen flex flex-col">
+    <div id="chat-history" class="flex-grow overflow-y-auto p-4 rounded-lg mb-4"></div>
+
+     <div class="flex">
+     <input type="text" id="user-input" placeholder="Напишите сообщение..." class="flex-grow px-4 py-2 rounded-lg mr-2 bg-gray-800 focus:outline-none focus:ring focus:ring-blue-300">
+     <button id="send-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Отправить</button>
+     <button id="clear-history" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">Очистить</button>
+ </div>
+
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
